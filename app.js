@@ -25,7 +25,7 @@ function generateQualira() {
     
     else {
 
-        document.querySelector('[randomNumber]').innerText = `Você não é um qualira \n você tem mais de ${roundTestosterone} de testosterona`
+        document.querySelector('[randomNumber]').innerText = `Você não é um qualira, você tem mais de ${roundTestosterone} de testosterona`
     }
 
 }
