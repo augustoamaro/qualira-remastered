@@ -15,7 +15,7 @@ function generateQualira() {
 
     if (round > 51) {
 
-        document.querySelector('[randomNumber]').innerText = `Você é um FUCKINNNN QUALIRA \n com ${round}% de qualiragem`
+        document.querySelector('[randomNumber]').innerText = `Você é um FUCKINNNN QUALIRA, com ${round}% de qualiragem`
 
     } else if (testosteroneLevel < 249) {
 
