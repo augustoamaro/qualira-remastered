@@ -1,9 +1,3 @@
-const spansquery = document.querySelectorAll('span');
-console.trace(spansquery)
-
-
-// const spansget = document.getElementsByTagName('span');
-// console.log(spansget)
 
 function generateQualira() {
 
@@ -16,6 +10,17 @@ function generateQualira() {
     const roundNumber = parseFloat(randomNumber.toFixed(0))
     const testosteroneLevel = (Math.random() * 1000)
     const roundTestosterone = parseFloat(testosteroneLevel.toFixed(0))
+    const x = 1024;
+    const y = 9999;
+    const deg = Math.floor(Math.random() * (x - y)) + y;
+
+    document.getElementById('box').style.transform = "rotate("+deg+"deg)";
+
+    var element = document.getElementById('mainbox');
+	element.classList.remove('animate');
+	setTimeout(function(){
+		element.classList.add('animate');
+	}, 5000);
 
     if (roundNumber > 51) {
 
@@ -34,21 +39,21 @@ function generateQualira() {
 
 }
 
-function myfunction(){
+// function myfunction(){
 
-    var x = 1024; //min value
-	var y = 9999; // max value
+//     var x = 1024; //min value
+// 	var y = 9999; // max value
 
-	var deg = Math.floor(Math.random() * (x - y)) + y;
+// 	var deg = Math.floor(Math.random() * (x - y)) + y;
 
-	document.getElementById('box').style.transform = "rotate("+deg+"deg)";
+// 	document.getElementById('box').style.transform = "rotate("+deg+"deg)";
 
-	var element = document.getElementById('mainbox');
-	element.classList.remove('animate');
-	setTimeout(function(){
-		element.classList.add('animate');
-	}, 5000);
-}
+// 	var element = document.getElementById('mainbox');
+// 	element.classList.remove('animate');
+// 	setTimeout(function(){
+// 		element.classList.add('animate');
+// 	}, 5000);
+// }
 
 generateQualira()
 
