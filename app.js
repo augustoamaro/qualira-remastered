@@ -1,4 +1,4 @@
-spinWheel = () => {
+function spinWheel() {
     const x = 1024;
     const y = 9999;
     const deg = Math.floor(Math.random() * (x - y)) + y;
@@ -11,34 +11,39 @@ spinWheel = () => {
         element.classList.add('animate');
     }, 5000);
 
+    generateQualira()
+
 }
 
 
-generateQualira = () => {
+function generateQualira() {
 
-    const monkeyName = ['Pira Kids', 'Anatoile', 'KratosPhp', 'Lucão do Java', 'Señor Developer', 'Leònidas', 'Menino Neitan', 'Felipão V1D4 L0K4'];
+    
+    const monkeyName = ['Pira Kids', 'Anatoile', 'KratosPhp', 'Lucão do Java', 'Señor Developer', 'Leònidas', 'Menino Neitan', 'Felipão'];
+    const array = monkeyName.values()
+
+    for (let names of array) {
+        const resultado = document.querySelectorAll('[teste]').innerText = names
+        console.log(resultado); // parou aqui
+    }
+
+    // for (b of spans) {
+    //     b.innerText = monkeyName
+    // }
 
     const randomMonkeyName = monkeyName[(Math.random() * monkeyName.length) | 0]
     document.querySelector('[randomName]').innerText = randomMonkeyName
 
     const randomNumber = (Math.random() * 101)
     const roundNumber = parseFloat(randomNumber.toFixed(0))
-    const testosteroneLevel = (Math.random() * 1000)
-    const roundTestosterone = parseFloat(testosteroneLevel.toFixed(0))
 
     if (roundNumber > 51) {
 
         document.querySelector('[randomNumber]').innerText = `Você é um FUCKINNNN QUALIRA, com ${roundNumber}% de qualiragem`
 
-    } else if (testosteroneLevel < 249) {
+    } else {
 
-        document.querySelector('[randomNumber]').innerText = `Melhore sua testosterona, quase virou um qualira!!!`
-
-    }
-
-    else {
-
-        document.querySelector('[randomNumber]').innerText = `Você não é um qualira, você tem mais de ${roundTestosterone} de testosterona`
+        document.querySelector('[randomNumber]').innerText = `Você não é um qualira, muito bem!`
     }
 
 }
