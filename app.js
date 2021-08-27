@@ -21,32 +21,24 @@ function generateQualira() {
     const bs = document.querySelectorAll('[slice]')
     const monkeyName = ['Pira Kids', 'Anatoile', 'KratosPhp', 'Lucão do Java', 'Señor Developer', 'Leònidas', 'Menino Neitan', 'Felipão'];    
 
-    //Pegar todos os spans
-    //Pegar todos os nomes
-    //Juntar tudo
-
     monkeyName.forEach(function(el, index) {
-        
+        bs[index].innerHTML = el
     })
-    
-     
-    
-    
 
-    // const randomMonkeyName = monkeyName[(Math.random() * monkeyName.length) | 0]
-    // document.querySelector('[randomName]').innerText = randomMonkeyName
+    const randomMonkeyName = monkeyName[(Math.random() * monkeyName.length) | 0]
+    document.querySelector('[randomName]').innerText = randomMonkeyName
 
-    // const randomNumber = (Math.random() * 101)
-    // const roundNumber = parseFloat(randomNumber.toFixed(0))
+    const randomNumber = (Math.random() * 101)
+    const roundNumber = parseFloat(randomNumber.toFixed(0))
 
-    // if (roundNumber > 51) {
+    if (roundNumber > 51) {
 
-    //     document.querySelector('[randomNumber]').innerText = `Você é um FUCKINNNN QUALIRA, com ${roundNumber}% de qualiragem`
+        document.querySelector('[randomNumber]').innerText = `Você é um FUCKINNNN QUALIRA, com ${roundNumber}% de qualiragem`
 
-    // } else {
+    } else {
 
-    //     document.querySelector('[randomNumber]').innerText = `Você não é um qualira, muito bem!`
-    // }
+        document.querySelector('[randomNumber]').innerText = `Você não é um qualira, muito bem!`
+    }
 
 }
 
