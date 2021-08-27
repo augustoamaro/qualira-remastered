@@ -3,7 +3,7 @@ function spinWheel() {
     const y = 9999;
     const deg = Math.floor(Math.random() * (x - y)) + y;
     
-    const rotate = document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
+    document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
     
     var element = document.getElementById('mainbox');
     element.classList.remove('animate');
@@ -18,12 +18,12 @@ function spinWheel() {
 
 function generateQualira() {
     
-    const bs = document.querySelectorAll('[slice]')
-    const monkeyName = ['Pira Kids', 'Anatoile', 'KratosPhp', 'Lucão do Java', 'Señor Developer', 'Leònidas', 'Menino Neitan', 'Felipão'];    
+    const slice = document.querySelectorAll('[slice]'); // Pega todos elementos b
+    const monkeyName = ['Pira Kids', 'Anatoile', 'KratosPhp', 'Lucão do Java', 'Señor Developer', 'Leònidas', 'Menino Neitan', 'Felipão']; // Array de string contendo os nomes 
 
-    monkeyName.forEach(function(el, index) {
-        bs[index].innerHTML = el
-    })
+    monkeyName.forEach((el, index) => { // Percorre todos os nomes, e para cada elemento b, adiciona o nome na posição correspondente
+        slice[index].innerHTML = el
+    });
 
     const randomMonkeyName = monkeyName[(Math.random() * monkeyName.length) | 0]
     document.querySelector('[randomName]').innerText = randomMonkeyName
