@@ -5,11 +5,11 @@ function spinWheel() {
     
     document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
     
-    var element = document.getElementById('mainbox');
-    element.classList.remove('animate');
-    setTimeout(function () {
-        element.classList.add('animate');
-    }, 5000);
+    // const element = document.querySelector('[arrow]');
+    // element.classList.remove('animate');
+    // setTimeout(function () {
+    //     element.classList.add('animate');
+    // }, 5000);
     
     generateQualira()
     
@@ -19,26 +19,31 @@ function spinWheel() {
 function generateQualira() {
     
     const slice = document.querySelectorAll('[slice]'); // Pega todos elementos b
-    const monkeyName = ['Pira Kids', 'Anatoile', 'KratosPhp', 'Lucão do Java', 'Señor Developer', 'Leònidas', 'Menino Neitan', 'Felipão']; // Array de string contendo os nomes 
+    const monkeyName = ['Pira Kids', 'Anatoile', 'KratosPhp', 'Lucão', 'Salazar', 'Leònidas', 'Neitan', 'Felipão']; // Array de string contendo os nomes 
 
     monkeyName.forEach((el, index) => { // Percorre todos os nomes, e para cada elemento b, adiciona o nome na posição correspondente
         slice[index].innerHTML = el
     });
 
-    const randomMonkeyName = monkeyName[(Math.random() * monkeyName.length) | 0]
-    document.querySelector('[randomName]').innerText = randomMonkeyName
+    const arrow = document.querySelector('[arrow]');
 
-    const randomNumber = (Math.random() * 101)
-    const roundNumber = parseFloat(randomNumber.toFixed(0))
+    
+    // console.log(arrow);
 
-    if (roundNumber > 51) {
+    // const randomMonkeyName = monkeyName[(Math.random() * monkeyName.length) | 0]
+    // document.querySelector('[randomName]').innerText = randomMonkeyName
 
-        document.querySelector('[randomNumber]').innerText = `Você é um FUCKINNNN QUALIRA, com ${roundNumber}% de qualiragem`
+    // const randomNumber = (Math.random() * 101)
+    // const roundNumber = parseFloat(randomNumber.toFixed(0))
 
-    } else {
+    // if (roundNumber > 51) {
 
-        document.querySelector('[randomNumber]').innerText = `Você não é um qualira, muito bem!`
-    }
+    //     document.querySelector('[randomNumber]').innerText = `Você é um FUCKINNNN QUALIRA, com ${roundNumber}% de qualiragem`
+
+    // } else {
+
+    //     document.querySelector('[randomNumber]').innerText = `Você não é um qualira, muito bem!`
+    // }
 
 }
 
